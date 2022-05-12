@@ -1,0 +1,23 @@
+body {
+  background-color: skyblue;
+}
+.page-title {
+  text-align: center;
+  margin-top: 10px;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+.home-div {
+  background-color: bisque;
+  text-align: center;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 75px;
+}
+
+
+
+
+
