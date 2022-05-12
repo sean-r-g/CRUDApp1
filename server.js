@@ -7,6 +7,11 @@ const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
+const meatController = require('./controllers/meat.js')
+const poultryController = require('./controllers/poultry.js')
+const seafoodController = require('./controllers/seafood.js')
+const vegController = require('./controllers/veg.js')
+
 //___________________
 //Port
 //___________________
@@ -47,12 +52,16 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
 //___________________
-// Routes
+// Controllers
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
+app.get('/recipes' , (req, res) => {
+  res.render('index.ejs')
 });
+app.use('/recipes/meat', meatController)
+app.use('/recipes/poultry', poultryController)
+app.use('/recipes/seafood', seafoodController)
+app.use('/recipes/vegetarian', vegController)
 
 //___________________
 //Listener
