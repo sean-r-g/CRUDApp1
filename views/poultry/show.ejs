@@ -9,7 +9,10 @@
     <%- include ('../partials/header.ejs') %>
   </header>
     <%- include ('../partials/showdiv.ejs') %>
-    <a class='edit-btn' href="/recipes/poultry/<%=recipe.id%>/edit"><button>Edit Recipe</button></a>
+    <a href="/recipes/poultry/<%=recipe.id%>/edit"><button class='edit-btn' >Edit Recipe</button></a>
   </div>
+  <footer>
+    <%- include ('../partials/footer.ejs') %>
+  </footer>
 </body>
 </html>

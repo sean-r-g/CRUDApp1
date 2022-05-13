@@ -12,12 +12,15 @@
   <div class="index-container">
     <a class="new-link" href="/recipes/poultry/new"><button>Add Recipe</button></a>
     <% for (let i=0;i < recipe.length;i++) { %>
-      <a class="recipe-link" href="/recipes/poultry/<%=recipe[i].id%>"><div class="recipe-container">
+      <div class="recipe-container">
         <img src=<%=recipe[i].img%>></img>
-        <h4><%=recipe[i].name%></h4>
+        <a class="recipe-link" href="/recipes/poultry/<%=recipe[i].id%>"><h4><%=recipe[i].name%></h4></a>
         <h5><%=recipe[i].cookTime%> min</h5>
-      </div></a>
+      </div>
     <% } %>
   </div>
+  <footer>
+    <%- include ('../partials/footer.ejs') %>
+  </footer>
 </body>
 </html>

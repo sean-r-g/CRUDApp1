@@ -15,7 +15,13 @@
       <div class="recipe-container">
         <img src=<%=recipe[i].img%>></img>
         <a class="recipe-link" href="/recipes/meat/<%=recipe[i].id%>"><h4><%=recipe[i].name%></h4></a>
-        <h5><%=recipe[i].cookTime%> min</h5>
+        <h5>Cook Time: <%=recipe[i].cookTime%> 
+          <% if (recipe[i].cookTime <= 12) { %>
+            hours
+          <% } else { %>
+            minutes
+          <% } %>
+        </h5>
       </div>
     <% } %>
   </div>
