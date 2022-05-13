@@ -8,9 +8,9 @@
   <header>
     <%- include ('../partials/header.ejs') %>
   </header>
-  <h1>Hello World -- Let's Cook some veggies!</h1>
-  <a href="/recipes/vegetarian/new"><button>Add Recipe</button></a>
+  <h1 class="page-title">Hello World -- Let's Cook some veggies!</h1>
   <div class="index-container">
+    <a class="new-link" href="/recipes/vegetarian/new"><button>Add Recipe</button></a>
     <% for (let i=0;i < recipe.length;i++) { %>
       <a class="recipe-link" href="/recipes/vegetarian/<%=recipe[i].id%>"><div class="recipe-container">
         <img src=<%=recipe[i].img%>></img>
