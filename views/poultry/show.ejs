@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+    <title><%=recipe.name%></title>
+  </head>
+<body>
+  <header>
+    <%- include ('../partials/header.ejs') %>
+  </header>
+    <%- include ('../partials/showdiv.ejs') %>
+  <div>
+    <a href="/recipes/poultry/<%=recipe.id%>/edit"><button>Edit Recipe</button></a>
+  </div>
+</body>
+</html>

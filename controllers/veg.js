@@ -14,7 +14,7 @@ router.get('/seed', (req, res)=>{
 //INDEX
 router.get('/', (req, res)=>{
   Veg.find({}, (err, allVeg)=>{
-    res.render('veg/index.ejs', {veg: allVeg})
+    res.render('veg/index.ejs', {recipe: allVeg})
   })
 })
 
@@ -27,35 +27,35 @@ router.get('/new', (req, res)=>{
 //SHOW
 router.get('/:id', (req, res)=>{
   Veg.findById(req.params.id, (err, currentveg)=>{
-    res.render('veg/show.ejs', {veg: currentveg})
+    res.render('veg/show.ejs', {recipe: currentveg})
   })
 })
 
 //EDIT
 router.get('/:id/edit', (req, res)=>{
   Veg.findById(req.params.id, (err, currentveg)=>{
-    res.render('veg/edit.ejs', {veg: currentveg})
+    res.render('veg/edit.ejs', {recipe: currentveg})
   })
 })
 
 //CREATE 
 router.post('/', (req, res)=>{
   Veg.create(req.body)
-  res.redirect('/')
+  res.redirect('/recipes/vegetarian')
   // res.send(req.body)
 })
 
 //UPDATE
 router.put('/:id', (req, res)=>{
   Veg.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem)=>{
-    res.redirect('/')
+    res.redirect('/recipes/vegetarian')
   })
 })
 
 //DELETE
 router.delete('/:id', (req, res)=>{
   Veg.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/')
+    res.redirect('/recipes/vegetarian')
   })
 })
 

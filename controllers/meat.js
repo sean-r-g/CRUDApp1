@@ -47,9 +47,6 @@ router.post('/', (req, res)=>{
 
 //UPDATE
 router.put('/:id', (req, res)=>{
-  if (req.body.cooktime) {
-    req.body.cooktime = parseInt(req.body.cooktime)
-  }
   Meat.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem)=>{
     res.redirect('/recipes/meat')
   })

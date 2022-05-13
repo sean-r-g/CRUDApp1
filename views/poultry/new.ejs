@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+    <title>New Recipe</title>
+  </head>
+<body>
+  <header>
+    <%- include ('../partials/header.ejs') %>
+  </header>
+  <div class="edit-container">
+    <form id="edit-recipe" action="/recipes/poultry" method="POST">
+      <%- include ('../partials/newform.ejs') %>
+    </form>
+  </div>
+</body>
+</html>

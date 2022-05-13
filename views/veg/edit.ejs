@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+    <title>Recipe Editor: <%=recipe.name%></title>
+  </head>
+<body>
+  <header>
+    <%- include ('../partials/header.ejs') %>
+  </header>
+  <div class="edit-container">
+    <form id="edit-recipe" action="/recipes/vegetarian/<%=recipe._id%>?_method=PUT" method="POST">
+    <%- include ('../partials/editform.ejs') %>
+    </form>
+    <form action="/recipes/vegetarian/<%=recipe.id%>?_method=DELETE" method="POST">
+      <input id="delete" type="submit" value="Delete Recipe"/>
+    </form>
+  </div>
+</body>
+</html>

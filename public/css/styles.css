@@ -42,7 +42,10 @@ nav ul {
 .recipe-container img, .show-container img {
   width: 150px;
 }
-
+#delete {
+  /* DONT FORGET TO CHANGE THIS */
+  margin-top: 400px;
+}
 
 
 
