@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+    <title>Recipe Home</title>
+  </head>
+<body>
+  <header>
+    <%- include ('../partials/header.ejs') %>
+  </header>
+  <div class="edit-container">
+    <form id="edit-recipe" action="/recipes/meat" method="POST">
+      <label>Name:</label><input type="text" name="name"/><br/>
+      <label>Image:</label><input type="text" name="img"/><br/>
+      <label>Link:</label><input type="text" name="link"/><br/>
+      <label>Cook Time:</label><input type="number" name="cookTime"/><br/>
+      <label>Style:</label><input type="text" name="style"/><br/>
+      <label>Main Ingredient:</label><input type="text" name="base"/><br/>
+      <label>Genre:</label><input type="text" name="genre"/><br/>
+      <label>Comments:</label><input type="text" name="comments"/><br/>
+      <input id="save-changes" type="submit" value="Create Recipe!"/>
+    </form>
+  </div>
+</body>
+</html>

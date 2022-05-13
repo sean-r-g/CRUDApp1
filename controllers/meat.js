@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-// const meatList = require('../models/Meatdb.js')
+const meatList = require('../models/meatdb.js')
 const Meat = require('../models/meat.js')
 
 
@@ -14,7 +14,7 @@ router.get('/seed', (req, res)=>{
 //INDEX
 router.get('/', (req, res)=>{
   Meat.find({}, (err, allMeat)=>{
-    res.render('meat/index.ejs', {meat: allMeat})
+    res.render('meat/index.ejs', {recipe: allMeat})
   })
 })
 
@@ -27,35 +27,38 @@ router.get('/new', (req, res)=>{
 //SHOW
 router.get('/:id', (req, res)=>{
   Meat.findById(req.params.id, (err, currentmeat)=>{
-    res.render('meat/show.ejs', {meat: currentmeat})
+    res.render('meat/show.ejs', {recipe: currentmeat})
   })
 })
 
 //EDIT
 router.get('/:id/edit', (req, res)=>{
   Meat.findById(req.params.id, (err, currentmeat)=>{
-    res.render('meat/edit.ejs', {meat: currentmeat})
+    res.render('meat/edit.ejs', {recipe: currentmeat})
   })
 })
 
 //CREATE 
 router.post('/', (req, res)=>{
   Meat.create(req.body)
-  res.redirect('/')
+  res.redirect('/recipes/meat')
   // res.send(req.body)
 })
 
 //UPDATE
 router.put('/:id', (req, res)=>{
+  if (req.body.cooktime) {
+    req.body.cooktime = parseInt(req.body.cooktime)
+  }
   Meat.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem)=>{
-    res.redirect('/')
+    res.redirect('/recipes/meat')
   })
 })
 
 //DELETE
 router.delete('/:id', (req, res)=>{
   Meat.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/')
+    res.redirect('/recipes/meat')
   })
 })
 

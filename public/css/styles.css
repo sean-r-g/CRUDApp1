@@ -39,6 +39,9 @@ nav ul {
   margin: 20px;
   border-radius: 75px;
 }
+.recipe-container img, .show-container img {
+  width: 150px;
+}
 
 
 

@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 const vegSchema = new mongoose.Schema ({
   name: String,
+  img: String,
   link: String,
   cookTime: Number,
   type: String,
