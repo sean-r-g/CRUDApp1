@@ -55,6 +55,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Controllers
 //___________________
 //localhost:3000
+app.get('/', (req, res)=>{
+  res.redirect('/recipes')
+})
 app.get('/recipes' , (req, res) => {
   res.render('index.ejs')
 });
@@ -62,6 +65,8 @@ app.use('/recipes/meat', meatController)
 app.use('/recipes/poultry', poultryController)
 app.use('/recipes/seafood', seafoodController)
 app.use('/recipes/vegetarian', vegController)
+
+
 
 //___________________
 //Listener
