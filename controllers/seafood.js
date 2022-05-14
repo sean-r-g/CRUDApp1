@@ -4,12 +4,12 @@ const router = express.Router()
 const Seafood = require('../models/seafood.js')
 
 
-//SEED 
-router.get('/seed', (req, res)=>{
-  Seafood.create(seafoodList, (err, allSeafood)=>{
-    res.redirect('/')
-  })
-})
+// //SEED 
+// router.get('/seed', (req, res)=>{
+//   Seafood.create(seafoodList, (err, allSeafood)=>{
+//     res.redirect('/')
+//   })
+// })
 
 //INDEX
 router.get('/', (req, res)=>{

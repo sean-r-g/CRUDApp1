@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
-// const VegList = require('../models/vegdb.js')
+const VegList = require('../models/veggiedb.js')
 const Veg = require('../models/veg.js')
 
 
 //SEED 
 router.get('/seed', (req, res)=>{
-  vegs.create(VegList, (err, allVeg)=>{
-    res.redirect('/')
+  Veg.create(VegList, (err, allVeg)=>{
+    res.redirect('/recipes/vegetarian')
   })
 })
 
