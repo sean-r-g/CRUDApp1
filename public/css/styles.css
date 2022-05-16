@@ -59,8 +59,33 @@ button {
 button:hover, a:hover {
   cursor: pointer;
 }
+/* Background animation sources: https://www.w3schools.com/css/css3_animations.asp, https://codepen.io/P1N2O/pen/pyBNzX */
+@keyframes rainbowGradient {
+	0% {background-position: 0% 25%;}
+  25% {background-position: 25% 50%;}
+	50% {background-position: 50% 100%;}
+	100% {background-position: 0% 50%;}
+}
+#random-div {
+  background: linear-gradient(to left, white, skyblue, rgb(217, 140, 140), bisque);
+  background-size: 200% 200%;
+  animation: rainbowGradient 15s ease infinite;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#random-btn {
+  color: black;
+  text-align: center;
+  /* margin-top: 15px;
+  margin-bottom: 15px; */
+  margin-left: auto;
+  margin-right: auto;
+}
 .edit-btn {
   background-color: skyblue;
+  background-image: radial-gradient(white, skyblue);
   color: black;
 }
 a:link {
@@ -77,6 +102,11 @@ a:hover {
 }
 a:active {
   text-decoration: underline;
+}
+#back-btn {
+  background-color: skyblue;
+  background-image: radial-gradient(white, skyblue);
+  margin-top: 30px;
 }
 /* ///////FOOTER////////// */
 footer {
@@ -151,7 +181,6 @@ footer {
   margin-right: auto;
 }
 
-
 /* //////EDIT PAGE////// */
 .edit-container {
   display: flex;
@@ -193,6 +222,15 @@ footer {
   cursor: pointer;
 }
 
+
+@media only screen and (max-device-width: 814px){
+  h1 {
+    font-size: 20px;
+  }
+  .show-container img, .recipe-container img{
+    width: 60%;
+  }
+}
 
 
 
