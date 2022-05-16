@@ -1,5 +1,6 @@
 body {
   background-color: skyblue;
+  background-image: radial-gradient(white, skyblue);
   margin: 0;
   padding: 0;
   height: 100%;
@@ -55,7 +56,7 @@ button {
   font-size: 16px;
   color: black;
 }
-button:hover {
+button:hover, a:hover {
   cursor: pointer;
 }
 .edit-btn {
@@ -150,9 +151,46 @@ footer {
   margin-right: auto;
 }
 
+
+/* //////EDIT PAGE////// */
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: bisque;
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 75px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.edit-container label{
+  text-align: center;
+}
+.edit-container input{
+  float: right;
+  width: 400px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+#save-changes, #delete{
+  background-color: skyblue;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 25px;
+  font-size: 16px;
+  color: black;
+}
 #delete {
   /* DONT FORGET TO CHANGE THIS */
-  margin-top: 400px;
+  margin-top: 200px;
+  background-color: rgb(217, 140, 140);
+}
+#save-changes, #delete:hover{
+  cursor: pointer;
 }
 
 
