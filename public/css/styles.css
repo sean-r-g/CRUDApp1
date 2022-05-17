@@ -13,6 +13,10 @@ body {
   flex-direction: row;
   font-family: 'Roboto Mono', monospace;
 }
+.navbar div{
+  margin-top: auto;
+  margin-bottom: auto;
+}
 nav ul {
   margin-top: auto;
   margin-bottom: auto;
@@ -24,6 +28,33 @@ nav ul {
 .nav-link {
   text-decoration: none;
   color: rgb(47, 138, 174);
+}
+#nav-dropdown{
+  overflow: hidden;
+  position: relative;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+.dropdown-link {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  right: 0;
+}
+#nav-dropdown li {
+  margin-bottom: 10px;
+}
+#hamburger {
+  width: 30px;
+}
+#hamburger-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
 }
 /* ////////////// */
 /* //////HOME PAGE//////// */
@@ -222,6 +253,7 @@ footer {
   cursor: pointer;
 }
 
+/* ///// MOBILE /////////// */
 
 @media only screen and (max-device-width: 814px){
   h1 {
@@ -229,6 +261,12 @@ footer {
   }
   .show-container img, .recipe-container img{
     width: 60%;
+  }
+  .navbar ul{
+    display: none;
+  }
+  #hamburger-link {
+    display: block;
   }
 }
 

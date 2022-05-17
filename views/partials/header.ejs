@@ -1,5 +1,6 @@
 <nav class="navbar">
   <a class="nav-link" href="/recipes"><img src="https://i.imgur.com/uZ5b7uo.png" width="122" height="62" alt=""></a>
+  <div>
     <ul>
       <li class="nav-item">
         <a class="nav-link" href="/recipes/meat">Meat</a>
@@ -18,4 +19,13 @@
       </li>
     </ul>
   </div>
+  <div id="nav-dropdown">
+    <a class="dropdown-link" href="/recipes/meat"><li>Meat</li></a>
+    <a class="dropdown-link" href="/recipes/poultry"><li>Poultry</li></a>
+    <a class="dropdown-link" href="/recipes/seafood"><li>Seafood</li></a>
+    <a class="dropdown-link" href="/recipes/vegetarian"><li>Vegetarian</li></a>
+  </div>
+  <a id="hamburger-link" onclick="showMenu()">
+    <img id='hamburger' src="https://img.icons8.com/external-bluetone-bomsymbols-/91/000000/external-hamburger-menu-digital-design-bluetone-set-2-bluetone-bomsymbols-.png"/>
+  </a>
 </nav>

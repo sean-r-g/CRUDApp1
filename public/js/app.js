@@ -70,7 +70,14 @@ if (randomCollection == '/meat/') {
   randomId = randomizeId(vegIds)
 }
 
-
+const showMenu = ()=>{
+  x = document.getElementById('nav-dropdown')
+  if (x.style.display === 'block') {
+    x.style.display = 'none'
+  } else {
+    x.style.display = 'block'
+  }
+}
 
 $(()=>{
 
@@ -78,6 +85,8 @@ $(()=>{
   $('#random-btn').on('click', ()=>{
     window.location.replace(`/recipes${randomCollection}${randomId}`)
   })
-
+  // $('hamburger-link').on('click', showMenu)
 })
+
+
 
