@@ -81,11 +81,9 @@ const showMenu = ()=>{
 
 $(()=>{
 
-
   $('#random-btn').on('click', ()=>{
     window.location.replace(`/recipes${randomCollection}${randomId}`)
   })
-  // $('hamburger-link').on('click', showMenu)
 })
 
 

@@ -46,6 +46,7 @@ nav ul {
 }
 #nav-dropdown li {
   margin-bottom: 10px;
+  list-style-type: none;
 }
 #hamburger {
   width: 30px;
@@ -55,6 +56,30 @@ nav ul {
   right: 0;
   top: 0;
   display: none;
+}
+.user-info {
+  margin-left: 100px;
+}
+.user-info li {
+  display: inline;
+  list-style-type: none;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 1 auto;
+  align-content: center;
+  overflow: auto ;
+  align-items: center;
+}
+.login-container button{
+  margin-top: 20px;
+}
+#login-form input{
+  margin-top: 10px;
+  width: 200px;
 }
 /* ////////////// */
 /* //////HOME PAGE//////// */
@@ -262,7 +287,10 @@ footer {
   .show-container img, .recipe-container img{
     width: 60%;
   }
-  .navbar ul{
+  #nav-list{
+    display: none;
+  }
+  .user-info {
     display: none;
   }
   #hamburger-link {

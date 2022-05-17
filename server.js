@@ -2,6 +2,8 @@
 //Dependencies
 //___________________
 const express = require('express');
+const session = require('express-session')
+const bcrypt = require('bcrypt')
 const res = require('express/lib/response');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
@@ -12,6 +14,11 @@ const meatController = require('./controllers/meat.js')
 const poultryController = require('./controllers/poultry.js')
 const seafoodController = require('./controllers/seafood.js')
 const vegController = require('./controllers/veg.js')
+const userController = require('./controllers/users.js')
+const sessionsController = require('./controllers/sessions.js')
+
+const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10))
+bcrypt.compareSync('yourGuessHere', hashedString)
 
 //___________________
 //Port
@@ -50,7 +57,13 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
 
 
 //___________________
@@ -61,12 +74,22 @@ app.get('/', (req, res)=>{
   res.redirect('/recipes')
 })
 app.get('/recipes' , (req, res) => {
-  res.render('index.ejs')
+  res.render('index.ejs', {currentUser: req.session.currentUser})
 });
+app.get('/recipes/users/new', (req, res)=>{
+  res.render('users/new.ejs', {currentUser: req.session.currentUser})
+})
+app.get('/recipes/sessions/new', (req,res)=>{
+  res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
+})
 app.use('/recipes/meat', meatController)
 app.use('/recipes/poultry', poultryController)
 app.use('/recipes/seafood', seafoodController)
 app.use('/recipes/vegetarian', vegController)
+app.use('/recipes/users', userController)
+app.use('/recipes/sessions', sessionsController)
+
+
 
 
 ///////////////////////////
