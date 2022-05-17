@@ -19,6 +19,7 @@
       </li>
     </ul>
   </div>
+  <div id="user-div">
   <ul class="user-info">
     <% if (currentUser) { %>
       <li>Welcome <%= currentUser.username %></li>
@@ -28,11 +29,12 @@
         </form>
       </li>
       <% } else { %>
-      <li><a href="/recipes/users/new"><button>Sign Up</button></a></li>
-      <li> | </li>
+      <!-- <li><a href="/recipes/users/new"><button>Sign Up</button></a></li>
+      <li> | </li> -->
       <li><a href="/recipes/sessions/new"><button>Log In</button></a></li>
       <% } %>
     </ul>
+  </div>
   <div id="nav-dropdown">
       <% if (currentUser) { %>
         <li>Welcome <%= currentUser.username %></li>
@@ -42,7 +44,7 @@
           </form>
         </li>
         <% } else { %>
-        <li><a href="/recipes/users/new"><button>Sign Up</button></a></li>
+        <!-- <li><a href="/recipes/users/new"><button>Sign Up</button></a></li> -->
         <li><a href="/recipes/sessions/new"><button>Log In</button></a></li>
         <% } %>
     <a class="dropdown-link" href="/recipes/meat"><li>Meat</li></a>

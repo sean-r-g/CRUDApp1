@@ -1,3 +1,5 @@
+const session = require("express-session")
+
 const allCollections = [
   '/meat/',
   '/poultry/',
@@ -80,6 +82,12 @@ const showMenu = ()=>{
 }
 
 $(()=>{
+
+  // $('.edit-btn').on('click', ()=>{
+  //   if (session.Storage.getItem('status') == null ) {
+  //     window.alert('Please log in to continue')
+  //   }
+  // })
 
   $('#random-btn').on('click', ()=>{
     window.location.replace(`/recipes${randomCollection}${randomId}`)

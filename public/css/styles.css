@@ -57,8 +57,11 @@ nav ul {
   top: 0;
   display: none;
 }
-.user-info {
-  margin-left: 100px;
+#user-div {
+  position: fixed;
+  right: 0;
+  align-self: center;
+  padding: 15px;
 }
 .user-info li {
   display: inline;
@@ -73,6 +76,7 @@ nav ul {
   align-content: center;
   overflow: auto ;
   align-items: center;
+  margin-top: 15px;
 }
 .login-container button{
   margin-top: 20px;
@@ -202,7 +206,7 @@ footer {
 }
 .recipe-container img, .show-container img {
   align-self: center;
-  max-width: 400px;
+  width: 400px;
   border: solid 1px skyblue;
   border-radius: 25px;
   box-shadow: 2px 2px 2px skyblue; 
@@ -278,6 +282,13 @@ footer {
   cursor: pointer;
 }
 
+#login-form h4{
+ text-align: center;
+}
+h4 span{
+  text-decoration: underline;
+}
+
 /* ///// MOBILE /////////// */
 
 @media only screen and (max-device-width: 814px){
@@ -287,6 +298,18 @@ footer {
   .show-container img, .recipe-container img{
     width: 60%;
   }
+  #nav-list{
+    display: none;
+  }
+  .user-info {
+    display: none;
+  }
+  #hamburger-link {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 750px) {
   #nav-list{
     display: none;
   }

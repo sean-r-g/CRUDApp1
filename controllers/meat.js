@@ -1,40 +1,46 @@
 const express = require('express')
 const router = express.Router()
-const meatList = require('../models/meatdb.js')
+// const meatList = require('../models/meatdb.js')
 const Meat = require('../models/meat.js')
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/recipes/sessions/new')
+  }
+}
 
-
-//SEED 
-router.get('/seed', (req, res)=>{
-  Meat.create(meatList, (err, allMeat)=>{
-    res.redirect('/')
-  })
-})
+// //SEED 
+// router.get('/seed', (req, res)=>{
+//   Meat.create(meatList, (err, allMeat)=>{
+//     res.redirect('/')
+//   })
+// })
 
 //INDEX
 router.get('/', (req, res)=>{
   Meat.find({}, (err, allMeat)=>{
-    res.render('meat/index.ejs', {recipe: allMeat})
+    res.render('meat/index.ejs', {recipe: allMeat, currentUser: req.session.currentUser})
   })
 })
 
 //NEW
-router.get('/new', (req, res)=>{
-    res.render('meat/new.ejs')
+router.get('/new', isAuthenticated, (req, res)=>{
+    res.render('meat/new.ejs', {currentUser: req.session.currentUser})
 })
 
 
 //SHOW
 router.get('/:id', (req, res)=>{
   Meat.findById(req.params.id, (err, currentmeat)=>{
-    res.render('meat/show.ejs', {recipe: currentmeat})
+    res.render('meat/show.ejs', {recipe: currentmeat, currentUser: req.session.currentUser})
   })
 })
 
 //EDIT
-router.get('/:id/edit', (req, res)=>{
+router.get('/:id/edit', isAuthenticated, (req, res)=>{
   Meat.findById(req.params.id, (err, currentmeat)=>{
-    res.render('meat/edit.ejs', {recipe: currentmeat})
+    res.render('meat/edit.ejs', {recipe: currentmeat, currentUser: req.session.currentUser})
   })
 })
 
@@ -55,7 +61,7 @@ router.put('/:id', (req, res)=>{
 //DELETE
 router.delete('/:id', (req, res)=>{
   Meat.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/recipes/meat')
+    res.redirect('/recipes/meat', {currentUser: req.session.currentUser})
   })
 })
 
