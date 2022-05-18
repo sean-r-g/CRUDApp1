@@ -8,22 +8,24 @@
     <header>
       <%- include ('../partials/header.ejs') %>
     </header>
-    <form id='login-form' action="/recipes/sessions/" method="post">
-      <div class="login-container">
-        <label for="username"><b>Username</b></label>
-        <input id='username' type="text" placeholder="Enter Username" name="username" required>
-    
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-        <!-- <label>
-          <input id="remember" type="checkbox" checked="checked" name="remember"> Remember me
-        </label> -->
-        <button type="submit">Login</button>
-      </div>
-      <div class="login-container">
-        <a href="/recipes/"><button type="button" class="cancelbtn">Cancel</button></a> 
-      </div>
-      <h4>Don't have an account? Click <span><a href="/recipes/users/new">here</a></span> to create one!</h4>
-    </form>
+    <div class="user-form-div">
+      <form id='login-form' action="/recipes/sessions/" method="post">
+        <div class="login-container">
+          <label for="username"><b>Username</b></label>
+          <input id='username' type="text" placeholder="Enter Username" name="username" required>
+      
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <!-- <label>
+            <input id="remember" type="checkbox" checked="checked" name="remember"> Remember me
+          </label> -->
+          <button type="submit">Login</button>
+        </div>
+        <div class="login-container">
+          <a href="/recipes/"><button type="button" class="cancelbtn">Cancel</button></a> 
+        </div>
+        <h4>Don't have an account? Click <span><a href="/recipes/users/new">here</a></span> to create one!</h4>
+      </form>
+    </div>
 </body>
 </html>

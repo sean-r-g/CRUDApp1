@@ -10,6 +10,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  top: 0;
 }
 .navbar {
   background-color:rgb(251, 251, 250);
@@ -89,6 +90,9 @@ nav ul {
 #login-form input{
   margin-top: 10px;
   width: 200px;
+}
+.user-form-div {
+  margin-top: 100px;
 }
 /* ////////////// */
 /* //////HOME PAGE//////// */
@@ -243,7 +247,8 @@ footer {
   background-color: bisque;
   text-align: center;
   padding: 35px;
-  margin: 20px;
+  /* margin: 20px; */
+  margin-top: 100px;
   border-radius: 75px;
   width: fit-content;
   height: fit-content;
@@ -260,7 +265,7 @@ footer {
   background-color: bisque;
   text-align: center;
   padding: 40px;
-  margin: 20px;
+  margin-top: 100px;
   border-radius: 75px;
   width: fit-content;
   height: fit-content;
