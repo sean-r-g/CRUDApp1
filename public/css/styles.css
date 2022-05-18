@@ -337,6 +337,19 @@ h4 span{
   .recipe-container img, .show-container img {
     width: 70%;
   }
+  .edit-container, .show-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .edit-container {
+    width: auto;
+  }
+  .edit-container input{
+    width: 100%;
+  }
+  .page-title {
+    padding: 5px;
+  }
 }
 
 
