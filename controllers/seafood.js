@@ -47,21 +47,21 @@ router.get('/:id/edit', isAuthenticated, (req, res)=>{
 //CREATE 
 router.post('/', (req, res)=>{
   Seafood.create(req.body)
-  res.redirect('/recipes/seafood', {currentUser: req.session.currentUser})
+  res.redirect('/recipes/seafood')
   // res.send(req.body)
 })
 
 //UPDATE
 router.put('/:id', (req, res)=>{
   Seafood.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem)=>{
-    res.redirect('/recipes/seafood', {currentUser: req.session.currentUser})
+    res.redirect('/recipes/seafood')
   })
 })
 
 //DELETE
 router.delete('/:id', (req, res)=>{
   Seafood.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/recipes/seafood', {currentUser: req.session.currentUser})
+    res.redirect('/recipes/seafood')
   })
 })
 

@@ -47,21 +47,21 @@ router.get('/:id/edit', isAuthenticated, (req, res)=>{
 //CREATE 
 router.post('/', (req, res)=>{
   Poultry.create(req.body)
-  res.redirect('/recipes/poultry', {currentUser: req.session.currentUser})
+  res.redirect('/recipes/poultry')
   // res.send(req.body)
 })
 
 //UPDATE
 router.put('/:id', (req, res)=>{
   Poultry.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedItem)=>{
-    res.redirect('/recipes/poultry', {currentUser: req.session.currentUser})
+    res.redirect('/recipes/poultry')
   })
 })
 
 //DELETE
 router.delete('/:id', (req, res)=>{
   Poultry.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/recipes/poultry', {currentUser: req.session.currentUser})
+    res.redirect('/recipes/poultry')
   })
 })
 

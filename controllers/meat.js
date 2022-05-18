@@ -61,7 +61,7 @@ router.put('/:id', (req, res)=>{
 //DELETE
 router.delete('/:id', (req, res)=>{
   Meat.findByIdAndDelete(req.params.id, (err, data)=>{
-    res.redirect('/recipes/meat', {currentUser: req.session.currentUser})
+    res.redirect('/recipes/meat')
   })
 })
 
