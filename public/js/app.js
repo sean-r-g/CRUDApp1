@@ -1,5 +1,6 @@
 // const session = require("express-session")
 
+
 const allCollections = [
   '/meat/',
   '/poultry/',
@@ -81,27 +82,24 @@ const showMenu = ()=>{
   }
 }
 
-// const rememberCheck = document.getElementById('remember')
-// const usernameValue = document.getElementById('username')
+// const loginModal = document.getElementById('user-form-div')
+// const loginBtn = document.getElementById('login-btn')
 
-// const rememberMe = () =>{
-//   if (rememberCheck.checked && usernameValue !== '') {
-//     localStorage.username = usernameValue.value
-//     rememberCheck = rememberCheck.ariaValueMax
-//   }
+// loginBtn.onclick = function() {
+//   loginModal.style.display = 'block'
+//   console.log('test test');
 // }
 
 $(()=>{
 
-  // $('.edit-btn').on('click', ()=>{
-  //   if (session.Storage.getItem('status') == null ) {
-  //     window.alert('Please log in to continue')
-  //   }
-  // })
 
   $('#random-btn').on('click', ()=>{
     window.location.replace(`/recipes${randomCollection}${randomId}`)
   })
+
+  // loginBtn.on('click', ()=>{
+  //   loginModal.style.display = 'block'
+  // })
 })
 
 

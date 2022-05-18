@@ -94,6 +94,9 @@ nav ul {
 .user-form-div {
   margin-top: 100px;
 }
+#welcome-msg {
+  font-style: italic;
+}
 /* ////////////// */
 /* //////HOME PAGE//////// */
 .title-div {
@@ -182,6 +185,17 @@ a:active {
   background-image: radial-gradient(white, skyblue);
   margin-top: 30px;
 }
+#logout-form{
+  padding-top: 5px;
+}
+#logout {
+  background-color: bisque;
+  border-radius: 15px;
+  font-family: 'Roboto Mono', monospace;
+}
+#logout:hover{
+  cursor: pointer;
+}
 /* ///////FOOTER////////// */
 footer {
   display: flex;
@@ -219,7 +233,9 @@ footer {
   height: fit-content;
 }
 .recipe-container img, .show-container img {
+  display: block;
   align-self: center;
+  height: auto;
   width: 400px;
   border: solid 1px skyblue;
   border-radius: 25px;

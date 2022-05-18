@@ -29,7 +29,6 @@ router.get('/new', isAuthenticated, (req, res)=>{
     res.render('meat/new.ejs', {currentUser: req.session.currentUser})
 })
 
-
 //SHOW
 router.get('/:id', (req, res)=>{
   Meat.findById(req.params.id, (err, currentmeat)=>{
