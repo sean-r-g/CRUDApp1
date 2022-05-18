@@ -329,6 +329,9 @@ h4 span{
   #hamburger-link {
     display: block;
   }
+  .recipe-container img, .show-container img {
+    width: 70%;
+  }
 }
 
 
