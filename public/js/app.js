@@ -1,4 +1,4 @@
-const session = require("express-session")
+// const session = require("express-session")
 
 const allCollections = [
   '/meat/',
@@ -80,6 +80,16 @@ const showMenu = ()=>{
     x.style.display = 'block'
   }
 }
+
+// const rememberCheck = document.getElementById('remember')
+// const usernameValue = document.getElementById('username')
+
+// const rememberMe = () =>{
+//   if (rememberCheck.checked && usernameValue !== '') {
+//     localStorage.username = usernameValue.value
+//     rememberCheck = rememberCheck.ariaValueMax
+//   }
+// }
 
 $(()=>{
 
