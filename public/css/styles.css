@@ -60,6 +60,7 @@ nav ul {
   right: 0;
   top: 0;
   display: none;
+  padding: 7px;
 }
 #user-div {
   position: fixed;
