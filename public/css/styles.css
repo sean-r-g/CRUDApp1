@@ -6,7 +6,11 @@ body {
   height: 100%;
   font-family: 'Roboto Mono', monospace;
 }
-/* Nav bar */
+/* Header + Nav bar */
+header {
+  position: fixed;
+  width: 100%;
+}
 .navbar {
   background-color:rgb(251, 251, 250);
   display: flex;
@@ -87,9 +91,14 @@ nav ul {
 }
 /* ////////////// */
 /* //////HOME PAGE//////// */
+.title-div {
+  display: flex;
+  justify-content: center;
+}
 .page-title {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 100px;
+  display: inline-block;
 }
 .home-container {
   display: flex;

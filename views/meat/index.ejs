@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <%- include ('../partials/head.ejs') %>
-    <title>Recipe Home</title>
+    <title>Sean's Kitchen - Meat Recipes</title>
   </head>
 <body>
   <header>
     <%- include ('../partials/header.ejs') %>
   </header>
-  <h1 class="page-title">Hello World -- Let's Cook Some Meat!</h1>
+  <div class="title-div">
+    <h1 class="page-title">Our Favorite Beef, Pork, and Lamb Recipes</h1>
+  </div>
   <div class="index-container">
     <a class="new-link" href="/recipes/meat/new"><button>Add Recipe</button></a>
     <% for (let i=0;i < recipe.length;i++) { %>
