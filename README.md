@@ -6,14 +6,14 @@ This application, Sean's Kitchen, is a hub for new and experiences home chefs to
 * Four separate databases of recipes that users can read, update, add to, and delete from
 * Functionality for users to create accounts and log in, which is required in order to edit, add, or delete
 * All recipes include the same standard information:
-- Name
-- Image
-- Link to recipe
-- Cook Time
-- Type of recipe
-- Base/Main Ingredient
-- Genre
-- Comments
+  - Name
+  - Image
+  - Link to recipe
+  - Cook Time
+  - Type of recipe
+  - Base/Main Ingredient
+  - Genre
+  - Comments
 ## Links
 Application Link (hosted by Heroku): https://immense-depths-20154.herokuapp.com/recipes
 
