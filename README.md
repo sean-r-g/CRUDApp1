@@ -5,15 +5,17 @@ This application, Sean's Kitchen, is a hub for new and experiences home chefs to
 * A home page with links to each category of recipes, broken down by main protein (i.e., seafood, vegetarian, etc.), as well as a button that takes users immediately to a random recipe
 * Four separate databases of recipes that users can read, update, add to, and delete from
 * Functionality for users to create accounts and log in, which is required in order to edit, add, or delete
-* All recipes include the same standard information:
-  - Name
-  - Image
-  - Link to recipe
-  - Cook Time
-  - Type of recipe
-  - Base/Main Ingredient
-  - Genre
-  - Comments
+* All recipes are created and maintained using this model:
+ ```javascript
+  name: String,
+  img: String,
+  link: String,
+  cookTime: Number,
+  type: String,
+  base: String,
+  genre: String,
+  comments: String
+  ```
 ## Links
 Application Link (hosted by Heroku): https://immense-depths-20154.herokuapp.com/recipes
 
@@ -47,4 +49,4 @@ After created the files outlined above, I wrote out the routes for all seven RES
 * Mongoose
 * Heroku
 ## Issues Along the Way
-I didn't run into any major issues with the initial app development, fortunately, but did hit quite a few snags adding in the the user/login functionality. The primary issue I ran into is that after I created an initial test user, I was unable to create more. The user information was being read as 'undefined' and would not actually add a new user to the collection. After reading through the Heroku error logs, I determined the issue was related to the collection indexes. After digging in more, I came to the conclusion that the error was caused by a change I made in the User Schema after creating the initial test account, resulting in multiple indexes being created. After dropping the extraneous index, everything functioned appropriately when creating new users.
+I didn't run into any major issues with the initial app development, fortunately, but did hit quite a few snags adding in the the user/login functionality. The primary issue I ran into is that after I created an initial test user, I was unable to create more. The user information was being read as ```undefined``` and would not actually add a new user to the collection. After reading through the Heroku error logs, I determined the issue was related to the collection indexes. After digging in more, I came to the conclusion that the error was caused by a change I made in the User Schema after creating the initial test account, resulting in multiple indexes being created. After dropping the extraneous index, everything functioned appropriately when creating new users.
