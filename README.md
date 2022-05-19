@@ -1,4 +1,4 @@
-# CRUDApp1
+# Sean's Kitchen - Home Chef Recipe Hub
 ## Overview
 This application, Sean's Kitchen, is a hub for new and experiences home chefs to explore new recipes, add their own favorites, and edit exiting ones as necessary. Sean's Kitchen includes the following:
 * Navigation bar that is consistent across all pages and designed for mobile viewing
