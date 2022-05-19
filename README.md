@@ -16,15 +16,16 @@ This application, Sean's Kitchen, is a hub for new and experiences home chefs to
 --Comments
 ## Links
 -Application Link (hosted by Heroku): https://immense-depths-20154.herokuapp.com/recipes
+
 -GitHub Repo: https://github.com/sean-r-g/CRUDApp1
 ## Approach
 My approach to designing and building this application was to start by first outlining the overall goal of the application, and then moving on to mocking up a few wireframes for the key views (Main, Index, Show, New/Edit)
 
 Main Page Wireframe
-![Main Page](https://imgur.com/2GCyoa1)
+![Main Page](https://i.imgur.com/2GCyoa1.png)
 
 Index Page Wireframe
-<img src="https://imgur.com/EPfEQZD"/>
+![Index Page](https://i.imgur.com/EPfEQZD.png)
 
 After that, I got to work creating the file structure and base .ejs and .js files. In total, for the base application build, I created:
 -One database
