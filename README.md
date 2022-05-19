@@ -37,7 +37,7 @@ After that, I got to work creating the file structure and base .ejs and .js file
 * Six partials to keep all pages consistent across views
 * A public folder with my styles.css and app.js
 
-After created the files outlined above, I wrote out the routes for all seven RESTful methods for each model/collection and did some initial testing. After that, I moved on to styling for desktop and mobile. Finally, I added in the user account creation and log in functionality. I did hit a significant issue with this after some testing, and will go into more detail in the last section of this markdown. In adding the user/login functionality, I created two additional models, views, controllers, and collections. 
+After created the files outlined above, I wrote out the routes for all seven RESTful methods for each model/collection and did some initial testing. After that, I moved on to styling for desktop and mobile. For styling, I looked into using Bootstrap, but ultimately decided to go with my own styling from scratch for more customization. Finally, I added in the user account creation and log in functionality. I did hit a significant issue with this after some testing, and will go into more detail in the last section of this markdown. In adding the user/login functionality, I created two additional models, views, controllers, and collections. 
 
 ## Technologies Used
 * JavaScript
