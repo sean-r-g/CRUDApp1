@@ -24,9 +24,26 @@ Main Page Wireframe
 ![Main Page](https://imgur.com/2GCyoa1)
 
 Index Page Wireframe
-![Index Page](https://imgur.com/EPfEQZD)
+<img src="https://imgur.com/EPfEQZD"/>
 
+After that, I got to work creating the file structure and base .ejs and .js files. In total, for the base application build, I created:
+-One database
+-Four models
+-Four collections
+-Four views sub folders with four ejs files in each (index, show, edit, new)
+-Six partials to keep all pages consistent across views
+-A public folder with my styles.css and app.js
 
+After created the files outlined above, I wrote out the routes for all seven RESTful methods for each model/collection and did some initial testing. After that, I moved on to styling for desktop and mobile. Finally, I added in the user account creation and log in functionality. I did hit a significant issue with this after some testing, and will go into more detail in the last section of this markdown. In adding the user/login functionality, I created two additional models, views, controllers, and collections. 
 
 ## Technologies Used
+-JavaScript
+-HTML
+-CSS
+-jQuery
+-Express
+-Mongo DB/Atlas
+-Mongoose
+-Heroku
 ## Issues Along the Way
+I didn't run into any major issues with the initial app development, fortunately, but did hit quite a few snags adding in the the user/login functionality. The primary issue I ran into is that after I created an initial test user, I was unable to create more. The user information was being read as 'undefined' and would not actually add a new user to the collection. After reading through the Heroku error logs, I determined the issue was related to the collection indexes. After digging in more, I came to the conclusion that the error was caused by a change I made in the User Schema after creating the initial test account, resulting in multiple indexes being created. After dropping the extraneous index, everything functioned appropriately when creating new users.
